@@ -55,7 +55,8 @@ flowchart LR
 
 These come from my own job search, taken on 30 September 2026. The only changes: the dashboard is
 cropped above the list of employers I'm currently interviewing with, and one company name is
-blurred (see the last screenshot), along with the response count in the bar across the top.
+blurred (see the risk-check screenshot), along with the response count in the bar across the top
+and the senders and subjects on the two email pages.
 
 **Dashboard.** Nearly 19,600 jobs tracked, with the pipeline from found to applied across the top:
 
@@ -80,6 +81,21 @@ fees behind a job title) before any time is spent applying. I've blurred the com
 because the point is the pattern and not the business:
 
 ![Risk flagged job](screenshots/job-risk.png)
+
+**Match Queue.** Employer emails turned into proposed status changes. Each email is classified
+(acknowledgement, assessment invite, rejection and so on), matched to the job it's about, and
+given a confidence score. High-confidence updates apply themselves. Anything less waits here
+for me to approve, ignore or correct, and corrections feed back into the classifier. Senders,
+subjects and matched jobs are blurred:
+
+![Match queue](screenshots/match-queue.png)
+
+**Email Review.** The audit trail behind the classifier: what each email was predicted to be,
+how confident it was, which rule or model made the call, and the label I confirmed. Most of my
+inbox is job-board notifications, which is why "unknown" dominates the counts. Senders and
+subjects are blurred:
+
+![Email review](screenshots/email-review.png)
 
 ## Security
 
